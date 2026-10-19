@@ -6,6 +6,7 @@
   "scripts": {
     "test": "cucumber-js",
     "test:playwright": "playwright test",
+    "test:login": "cucumber-js --tags @login",
     "test:tc12": "cucumber-js --tags @tc12",
     "test:tc13": "cucumber-js --tags @tc13",
     "test:tc14": "cucumber-js --tags @tc14",
@@ -13,7 +14,8 @@
     "test:tc16": "cucumber-js --tags @tc16",
     "test:tc20": "cucumber-js --tags @tc20",
     "test:tc23": "cucumber-js --tags @tc23",
-    "test:tc25": "cucumber-js --tags @tc25"
+    "test:tc25": "cucumber-js --tags @tc25",
+    "report": "start test-results/cucumber-report.html"
   },
   "keywords": [
     "cucumber",

@@ -59,6 +59,37 @@ When('Fill email {string}, password {string} and click {string} button', async f
   await loginPage.login(email, pass);
 });
 
+When('Fill email, password and click {string} button', async function (_btnName: string) {
+  getPages();
+  const timestamp = Date.now();
+  const freshEmail = `testuser_login_${timestamp}@mailinator.com`;
+  lastRegisteredUsername = 'TestUser';
+  lastRegistrationDetails.email = freshEmail;
+  await page.request.post('https://automationexercise.com/api/createAccount', {
+    form: {
+      name: lastRegisteredUsername,
+      email: freshEmail,
+      password: lastRegistrationDetails.password,
+      title: 'Mr',
+      birth_date: '10',
+      birth_month: '5',
+      birth_year: '1995',
+      firstname: lastRegistrationDetails.firstName,
+      lastname: lastRegistrationDetails.lastName,
+      company: lastRegistrationDetails.company,
+      address1: lastRegistrationDetails.address1,
+      address2: lastRegistrationDetails.address2,
+      country: lastRegistrationDetails.country,
+      zipcode: lastRegistrationDetails.zipcode,
+      state: lastRegistrationDetails.state,
+      city: lastRegistrationDetails.city,
+      mobile_number: lastRegistrationDetails.mobile
+    }
+  });
+
+  await loginPage.login(freshEmail, lastRegistrationDetails.password);
+});
+
 When('Fill all details in Signup and create account', async function () {
   getPages();
   const timestamp = Date.now();

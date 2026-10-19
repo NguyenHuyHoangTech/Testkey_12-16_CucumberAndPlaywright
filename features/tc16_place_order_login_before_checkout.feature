@@ -5,9 +5,8 @@ Feature: Test Case 16: Place Order: Login before Checkout
     Given Navigate to url "http://automationexercise.com"
     Then Verify that home page is visible successfully
     When Click "Signup / Login" button
-    And Fill all details in Signup and create account
-    Then Verify "ACCOUNT CREATED!" and click "Continue" button
-    And Verify "Logged in as username" at top
+    And Fill email, password and click "Login" button
+    Then Verify "Logged in as username" at top
     When Add products to cart
     And Click "Cart" button
     Then Verify that cart page is displayed

@@ -13,7 +13,7 @@ module.exports = {
     ],
     format: [
       'summary',
-      'progress-bar',
+      process.stdout.isTTY ? 'progress-bar' : 'progress',
       'html:test-results/cucumber-report.html',
       'json:test-results/cucumber-report.json'
     ],
