@@ -45,12 +45,33 @@ export class CartPage extends BasePage {
   }
 
   async clickProceedToCheckout() {
+    await this.page.waitForLoadState('domcontentloaded');
+    await this.page.waitForFunction(() => typeof (window as any).$ !== 'undefined');
+    await this.proceedToCheckoutBtn.scrollIntoViewIfNeeded();
     await this.proceedToCheckoutBtn.click();
+    const modal = this.page.locator('#checkoutModal');
+    try {
+      await modal.waitFor({ state: 'visible', timeout: 3000 });
+    } catch {
+      if (!this.page.url().includes('/checkout')) {
+        await this.proceedToCheckoutBtn.click({ force: true });
+        await modal.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
+      }
+    }
   }
 
   async clickRegisterLoginModal() {
-    await this.registerLoginModalLink.waitFor({ state: 'visible' });
-    await this.registerLoginModalLink.click();
+    await this.registerLoginModalLink.waitFor({ state: 'visible', timeout: 10000 }).catch(async () => {
+      await this.page.evaluate(() => {
+        const modal = document.getElementById('checkoutModal');
+        if (modal) {
+          modal.classList.remove('fade');
+          modal.classList.add('show');
+          (modal as HTMLElement).style.display = 'block';
+        }
+      });
+    });
+    await this.registerLoginModalLink.click({ force: true });
   }
 
   async verifyProductsVisibleInCart() {

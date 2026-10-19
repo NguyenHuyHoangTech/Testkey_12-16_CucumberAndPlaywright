@@ -16,7 +16,7 @@ BeforeAll(async function () {
   const browserType = process.env.BROWSER || 'chromium';
   const isCI = process.env.CI === 'true' || !!process.env.GITHUB_ACTIONS;
   const headless = isCI ? true : process.env.HEADLESS === 'true';
-  const slowMo = isCI ? 0 : (process.env.SLOW_MO ? parseInt(process.env.SLOW_MO, 10) : 0);
+  const slowMo = isCI ? 50 : (process.env.SLOW_MO ? parseInt(process.env.SLOW_MO, 10) : 0);
 
   const launchOptions = {
     headless,

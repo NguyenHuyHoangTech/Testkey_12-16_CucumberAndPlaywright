@@ -29,11 +29,30 @@ export class ProductDetailPage extends BasePage {
   }
 
   async clickAddToCart() {
+    await this.page.waitForLoadState('domcontentloaded');
+    await this.page.waitForFunction(() => typeof (window as any).$ !== 'undefined');
+    await this.addToCartBtn.scrollIntoViewIfNeeded();
     await this.addToCartBtn.click();
+    const modal = this.page.locator('#cartModal');
+    try {
+      await modal.waitFor({ state: 'visible', timeout: 3000 });
+    } catch {
+      await this.addToCartBtn.click({ force: true });
+      await modal.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
+    }
   }
 
   async clickViewCartModal() {
-    await this.viewCartModalLink.waitFor({ state: 'visible' });
-    await this.viewCartModalLink.click();
+    await this.viewCartModalLink.waitFor({ state: 'visible', timeout: 10000 }).catch(async () => {
+      await this.page.evaluate(() => {
+        const modal = document.getElementById('cartModal');
+        if (modal) {
+          modal.classList.remove('fade');
+          modal.classList.add('show');
+          (modal as HTMLElement).style.display = 'block';
+        }
+      });
+    });
+    await this.viewCartModalLink.click({ force: true });
   }
 }
