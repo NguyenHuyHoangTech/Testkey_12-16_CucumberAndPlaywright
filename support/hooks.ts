@@ -14,15 +14,22 @@ export let page: Page;
 
 BeforeAll(async function () {
   const browserType = process.env.BROWSER || 'chromium';
-  const headless = process.env.HEADLESS === 'true';
-  const slowMo = process.env.SLOW_MO ? parseInt(process.env.SLOW_MO, 10) : 0;
+  const isCI = process.env.CI === 'true' || !!process.env.GITHUB_ACTIONS;
+  const headless = isCI ? true : process.env.HEADLESS === 'true';
+  const slowMo = isCI ? 0 : (process.env.SLOW_MO ? parseInt(process.env.SLOW_MO, 10) : 0);
+
+  const launchOptions = {
+    headless,
+    slowMo,
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
+  };
 
   if (browserType === 'firefox') {
-    browser = await firefox.launch({ headless, slowMo });
+    browser = await firefox.launch(launchOptions);
   } else if (browserType === 'webkit') {
-    browser = await webkit.launch({ headless, slowMo });
+    browser = await webkit.launch(launchOptions);
   } else {
-    browser = await chromium.launch({ headless, slowMo });
+    browser = await chromium.launch(launchOptions);
   }
 });
 
