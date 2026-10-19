@@ -1,0 +1,36 @@
+{
+  "name": "testkey-12-16-cucumber-playwright",
+  "version": "1.0.0",
+  "description": "Automation testing framework with Cucumber, Playwright and TypeScript for AutomationExercise Test Cases 12-16",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:playwright": "playwright test",
+    "test:tc12": "cucumber-js --tags @tc12",
+    "test:tc13": "cucumber-js --tags @tc13",
+    "test:tc14": "cucumber-js --tags @tc14",
+    "test:tc15": "cucumber-js --tags @tc15",
+    "test:tc16": "cucumber-js --tags @tc16",
+    "test:tc20": "cucumber-js --tags @tc20",
+    "test:tc23": "cucumber-js --tags @tc23",
+    "test:tc25": "cucumber-js --tags @tc25"
+  },
+  "keywords": [
+    "cucumber",
+    "playwright",
+    "typescript",
+    "automation-testing",
+    "bdd"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.9.0",
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^22.7.5",
+    "dotenv": "^16.4.5",
+    "playwright": "^1.48.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

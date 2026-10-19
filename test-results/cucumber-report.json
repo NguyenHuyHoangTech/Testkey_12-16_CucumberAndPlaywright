@@ -1,0 +1,1807 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-authentication;login-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Login with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 152723300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "Navigate to url \"http://automationexercise.com\"",
+            "match": {
+              "location": "steps\\login.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1706486899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Verify that home page is visible successfully",
+            "match": {
+              "location": "steps\\login.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34116699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Click \"Signup / Login\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1806642799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "Fill email \"testuser@example.com\", password \"Password123!\" and click \"Login\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1285360100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 33130900
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-authentication",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User Authentication",
+    "tags": [],
+    "uri": "features\\login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "test-case-12:-add-products-in-cart;add-products-to-cart-and-verify-details",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Add products to cart and verify details",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 115778899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "Navigate to url \"http://automationexercise.com\"",
+            "match": {
+              "location": "steps\\login.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 886764399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Verify that home page is visible successfully",
+            "match": {
+              "location": "steps\\login.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24216700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Click \"Products\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 812835799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "Hover over first product and click \"Add to cart\"",
+            "match": {
+              "location": "steps\\products.steps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1195888899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "Click \"Continue Shopping\" button in modal",
+            "match": {
+              "location": "steps\\products.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 363796399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Hover over second product and click \"Add to cart\"",
+            "match": {
+              "location": "steps\\products.steps.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1199046099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "Click \"View Cart\" button in modal",
+            "match": {
+              "location": "steps\\products.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 651659700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "Verify both products are added to Cart",
+            "match": {
+              "location": "steps\\checkout.steps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16426499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "Verify their prices, quantity and total price",
+            "match": {
+              "location": "steps\\checkout.steps.ts:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20563599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 27865299
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tc12",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "test-case-12:-add-products-in-cart",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Test Case 12: Add Products in Cart",
+    "tags": [
+      {
+        "name": "@tc12",
+        "line": 1
+      }
+    ],
+    "uri": "features\\tc12_add_products_in_cart.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "test-case-13:-verify-product-quantity-in-cart;verify-exact-product-quantity-in-cart",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Verify exact product quantity in cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 114255800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "Navigate to url \"http://automationexercise.com\"",
+            "match": {
+              "location": "steps\\login.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 845649799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Verify that home page is visible successfully",
+            "match": {
+              "location": "steps\\login.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26482200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Click \"View Product\" for any product on home page",
+            "match": {
+              "location": "steps\\products.steps.ts:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 644673300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Verify product detail is opened",
+            "match": {
+              "location": "steps\\products.steps.ts:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22576900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "Increase quantity to 4",
+            "match": {
+              "location": "steps\\products.steps.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 628173499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Click \"Add to cart\" button on product detail page",
+            "match": {
+              "location": "steps\\products.steps.ts:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 357147399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "Click \"View Cart\" button in modal",
+            "match": {
+              "location": "steps\\products.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 649641400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "Verify that cart page is displayed",
+            "match": {
+              "location": "steps\\checkout.steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20949300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "Verify that product is displayed in cart page with exact quantity 4",
+            "match": {
+              "location": "steps\\checkout.steps.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4509500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 33551799
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tc13",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "test-case-13:-verify-product-quantity-in-cart",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Test Case 13: Verify Product quantity in Cart",
+    "tags": [
+      {
+        "name": "@tc13",
+        "line": 1
+      }
+    ],
+    "uri": "features\\tc13_verify_product_quantity.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "test-case-14:-place-order:-register-while-checkout;register-account-during-checkout-and-place-order-successfully",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Register account during checkout and place order successfully",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 128473899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "Navigate to url \"http://automationexercise.com\"",
+            "match": {
+              "location": "steps\\login.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1360994499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Verify that home page is visible successfully",
+            "match": {
+              "location": "steps\\login.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24638599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Add products to cart",
+            "match": {
+              "location": "steps\\products.steps.ts:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1730441600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "Click \"Cart\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 632457500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "Verify that cart page is displayed",
+            "match": {
+              "location": "steps\\checkout.steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21157800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "Click Proceed To Checkout",
+            "match": {
+              "location": "steps\\checkout.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 333347600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "Click \"Register / Login\" button on checkout modal",
+            "match": {
+              "location": "steps\\checkout.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1118608099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "Fill all details in Signup and create account",
+            "match": {
+              "location": "steps\\login.steps.ts:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12445344600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "Verify \"ACCOUNT CREATED!\" and click \"Continue\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 697881000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "Verify \"Logged in as username\" at top",
+            "match": {
+              "location": "steps\\login.steps.ts:128"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28015399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "Click \"Cart\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1401674599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "Click Proceed To Checkout",
+            "match": {
+              "location": "steps\\checkout.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 630501300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "Verify Address Details and Review Your Order",
+            "match": {
+              "location": "steps\\checkout.steps.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23009599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "Enter description in comment text area and click \"Place Order\"",
+            "match": {
+              "location": "steps\\checkout.steps.ts:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 957407899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "Enter payment details: Name on Card, Card Number, CVC, Expiration date",
+            "match": {
+              "location": "steps\\checkout.steps.ts:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1570014000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "Click \"Pay and Confirm Order\" button on payment page",
+            "match": {
+              "location": "steps\\checkout.steps.ts:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1942087299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "Verify success message \"Your order has been placed successfully!\"",
+            "match": {
+              "location": "steps\\checkout.steps.ts:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16874299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "Click \"Delete Account\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 648015800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "Verify \"ACCOUNT DELETED!\" and click \"Continue\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 696473900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 34036800
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tc14",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "test-case-14:-place-order:-register-while-checkout",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Test Case 14: Place Order: Register while Checkout",
+    "tags": [
+      {
+        "name": "@tc14",
+        "line": 1
+      }
+    ],
+    "uri": "features\\tc14_place_order_register_while_checkout.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "test-case-15:-place-order:-register-before-checkout;register-account-before-checkout-and-place-order-successfully",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Register account before checkout and place order successfully",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 113255899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "Navigate to url \"http://automationexercise.com\"",
+            "match": {
+              "location": "steps\\login.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 871693200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Verify that home page is visible successfully",
+            "match": {
+              "location": "steps\\login.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23290699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Click \"Signup / Login\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 624036299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "Fill all details in Signup and create account",
+            "match": {
+              "location": "steps\\login.steps.ts:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9202052199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "Verify \"ACCOUNT CREATED!\" and click \"Continue\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1068864600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Verify \"Logged in as username\" at top",
+            "match": {
+              "location": "steps\\login.steps.ts:128"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27705300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "Add products to cart",
+            "match": {
+              "location": "steps\\products.steps.ts:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1613620900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "Click \"Cart\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 632090300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "Verify that cart page is displayed",
+            "match": {
+              "location": "steps\\checkout.steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20231200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "Click Proceed To Checkout",
+            "match": {
+              "location": "steps\\checkout.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 617774400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "Verify Address Details and Review Your Order",
+            "match": {
+              "location": "steps\\checkout.steps.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23648199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "Enter description in comment text area and click \"Place Order\"",
+            "match": {
+              "location": "steps\\checkout.steps.ts:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1077456200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "Enter payment details: Name on Card, Card Number, CVC, Expiration date",
+            "match": {
+              "location": "steps\\checkout.steps.ts:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1567024700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "Click \"Pay and Confirm Order\" button on payment page",
+            "match": {
+              "location": "steps\\checkout.steps.ts:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1942813000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "Verify success message \"Your order has been placed successfully!\"",
+            "match": {
+              "location": "steps\\checkout.steps.ts:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15899599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "Click \"Delete Account\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 633494099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "Verify \"ACCOUNT DELETED!\" and click \"Continue\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 671924800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 32528700
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tc15",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "test-case-15:-place-order:-register-before-checkout",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Test Case 15: Place Order: Register before Checkout",
+    "tags": [
+      {
+        "name": "@tc15",
+        "line": 1
+      }
+    ],
+    "uri": "features\\tc15_place_order_register_before_checkout.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "test-case-16:-place-order:-login-before-checkout;login-before-checkout-and-place-order-successfully",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Login before checkout and place order successfully",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 112487300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "Navigate to url \"http://automationexercise.com\"",
+            "match": {
+              "location": "steps\\login.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 861550499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Verify that home page is visible successfully",
+            "match": {
+              "location": "steps\\login.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25123800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Click \"Signup / Login\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 624820599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "Fill all details in Signup and create account",
+            "match": {
+              "location": "steps\\login.steps.ts:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8102151700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "Verify \"ACCOUNT CREATED!\" and click \"Continue\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 691204100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Verify \"Logged in as username\" at top",
+            "match": {
+              "location": "steps\\login.steps.ts:128"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27553999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "Add products to cart",
+            "match": {
+              "location": "steps\\products.steps.ts:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1605088300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "Click \"Cart\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 648934200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "Verify that cart page is displayed",
+            "match": {
+              "location": "steps\\checkout.steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20060100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "Click Proceed To Checkout",
+            "match": {
+              "location": "steps\\checkout.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 623171000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "Verify Address Details and Review Your Order",
+            "match": {
+              "location": "steps\\checkout.steps.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22353100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "Enter description in comment text area and click \"Place Order\"",
+            "match": {
+              "location": "steps\\checkout.steps.ts:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 958135800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "Enter payment details: Name on Card, Card Number, CVC, Expiration date",
+            "match": {
+              "location": "steps\\checkout.steps.ts:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1571024999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "Click \"Pay and Confirm Order\" button on payment page",
+            "match": {
+              "location": "steps\\checkout.steps.ts:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2053803499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "Verify success message \"Your order has been placed successfully!\"",
+            "match": {
+              "location": "steps\\checkout.steps.ts:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16589399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "Click \"Delete Account\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 852314599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "Verify \"ACCOUNT DELETED!\" and click \"Continue\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 725101599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 30740999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tc16",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "test-case-16:-place-order:-login-before-checkout",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Test Case 16: Place Order: Login before Checkout",
+    "tags": [
+      {
+        "name": "@tc16",
+        "line": 1
+      }
+    ],
+    "uri": "features\\tc16_place_order_login_before_checkout.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "test-case-20:-search-products-and-verify-cart-after-login;search-products,-add-to-cart-and-verify-cart-after-login",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Search products, add to cart and verify cart after login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 114244999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "Navigate to url \"http://automationexercise.com\"",
+            "match": {
+              "location": "steps\\login.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 969652799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "Click \"Products\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 817751799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "Verify user is navigated to ALL PRODUCTS page successfully",
+            "match": {
+              "location": "steps\\products.steps.ts:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26597599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "Enter product name \"Tshirt\" in search input and click search button",
+            "match": {
+              "location": "steps\\products.steps.ts:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10334109500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "Verify \"SEARCHED PRODUCTS\" is visible",
+            "match": {
+              "location": "steps\\products.steps.ts:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14488200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Verify all the products related to search are visible",
+            "match": {
+              "location": "steps\\products.steps.ts:94"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20603799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "Add those products to cart",
+            "match": {
+              "location": "steps\\products.steps.ts:99"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12327210099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "Click \"Cart\" button and verify that products are visible in cart",
+            "match": {
+              "location": "steps\\products.steps.ts:104"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 683191100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "Click \"Signup / Login\" button and submit login details",
+            "match": {
+              "location": "steps\\login.steps.ts:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6151567999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "Again, go to Cart page",
+            "match": {
+              "location": "steps\\login.steps.ts:109"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7283575300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "Verify that those products are visible in cart after login as well",
+            "match": {
+              "location": "steps\\products.steps.ts:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34539299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 28849400
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tc20",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "test-case-20:-search-products-and-verify-cart-after-login",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Test Case 20: Search Products and Verify Cart After Login",
+    "tags": [
+      {
+        "name": "@tc20",
+        "line": 1
+      }
+    ],
+    "uri": "features\\tc20_search_products_verify_cart_after_login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "test-case-23:-verify-address-details-in-checkout-page;verify-address-details-in-checkout-page-matches-account-registration",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Verify address details in checkout page matches account registration",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 117891900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "Navigate to url \"http://automationexercise.com\"",
+            "match": {
+              "location": "steps\\login.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2403618900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Verify that home page is visible successfully",
+            "match": {
+              "location": "steps\\login.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22188699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Click \"Signup / Login\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4517052800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "Fill all details in Signup and create account",
+            "match": {
+              "location": "steps\\login.steps.ts:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8144380400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "Verify \"ACCOUNT CREATED!\" and click \"Continue\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 666142899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Verify \"Logged in as username\" at top",
+            "match": {
+              "location": "steps\\login.steps.ts:128"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26283900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "Add products to cart",
+            "match": {
+              "location": "steps\\products.steps.ts:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1607538399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "Click \"Cart\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 616138999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "Verify that cart page is displayed",
+            "match": {
+              "location": "steps\\checkout.steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20696200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "Click Proceed To Checkout",
+            "match": {
+              "location": "steps\\checkout.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 639815099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "Verify that the delivery address is same address filled at the time registration of account",
+            "match": {
+              "location": "steps\\checkout.steps.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21960800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "Verify that the billing address is same address filled at the time registration of account",
+            "match": {
+              "location": "steps\\checkout.steps.ts:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7409599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "Click \"Delete Account\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 659387099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "Verify \"ACCOUNT DELETED!\" and click \"Continue\" button",
+            "match": {
+              "location": "steps\\login.steps.ts:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 700024399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 33142900
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tc23",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "test-case-23:-verify-address-details-in-checkout-page",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Test Case 23: Verify address details in checkout page",
+    "tags": [
+      {
+        "name": "@tc23",
+        "line": 1
+      }
+    ],
+    "uri": "features\\tc23_verify_address_details_in_checkout.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "test-case-25:-verify-scroll-up-using-'arrow'-button-and-scroll-down-functionality;verify-scroll-up-using-arrow-button-and-scroll-down-functionality",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Verify Scroll Up using Arrow button and Scroll Down functionality",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 149385999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "Navigate to url \"http://automationexercise.com\"",
+            "match": {
+              "location": "steps\\login.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 916895500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Verify that home page is visible successfully",
+            "match": {
+              "location": "steps\\login.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21769999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Scroll down page to bottom",
+            "match": {
+              "location": "steps\\products.steps.ts:130"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 512515599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Verify \"SUBSCRIPTION\" is visible",
+            "match": {
+              "location": "steps\\products.steps.ts:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5884799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "Click on arrow at bottom right side to move upward",
+            "match": {
+              "location": "steps\\products.steps.ts:135"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2181115000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "Verify that page is scrolled up and 'Full-Fledged practice website for Automation Engineers' text is visible on screen",
+            "match": {
+              "location": "steps\\products.steps.ts:140"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4015500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 30104499
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tc25",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "test-case-25:-verify-scroll-up-using-'arrow'-button-and-scroll-down-functionality",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Test Case 25: Verify Scroll Up using 'Arrow' button and Scroll Down functionality",
+    "tags": [
+      {
+        "name": "@tc25",
+        "line": 1
+      }
+    ],
+    "uri": "features\\tc25_verify_scroll_up_using_arrow_button.feature"
+  }
+]
