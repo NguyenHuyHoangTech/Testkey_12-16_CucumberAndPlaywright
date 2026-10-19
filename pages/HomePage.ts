@@ -44,7 +44,7 @@ export class HomePage extends BasePage {
     await this.firstProductItem.hover();
     const overlayBtn = this.firstProductItem.locator('.overlay-content .add-to-cart');
     if (await overlayBtn.isVisible()) {
-      await overlayBtn.click();
+      await overlayBtn.click({ force: true });
     } else {
       await this.firstProductAddToCartBtn.click({ force: true });
     }
@@ -61,7 +61,7 @@ export class HomePage extends BasePage {
     await this.secondProductItem.hover();
     const overlayBtn = this.secondProductItem.locator('.overlay-content .add-to-cart');
     if (await overlayBtn.isVisible()) {
-      await overlayBtn.click();
+      await overlayBtn.click({ force: true });
     } else {
       await this.secondProductAddToCartBtn.click({ force: true });
     }

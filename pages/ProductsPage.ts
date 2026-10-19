@@ -30,13 +30,8 @@ export class ProductsPage extends BasePage {
   async addProductByIndex(index: number) {
     const productCard = this.productCards.nth(index);
     await productCard.scrollIntoViewIfNeeded();
-    await productCard.hover();
-    const overlayBtn = productCard.locator('.overlay-content .add-to-cart');
-    if (await overlayBtn.isVisible()) {
-      await overlayBtn.click();
-    } else {
-      await productCard.locator('.productinfo .add-to-cart').click({ force: true });
-    }
+    const addBtn = productCard.locator('.add-to-cart').first();
+    await addBtn.click({ force: true });
   }
 
   async clickContinueShopping() {
@@ -88,15 +83,21 @@ export class ProductsPage extends BasePage {
       const name = await card.locator('.productinfo p').first().innerText();
       names.push(name.replace(/\s+/g, ' ').trim());
 
-      await card.hover();
-      const overlayBtn = card.locator('.overlay-content .add-to-cart');
-      if (await overlayBtn.isVisible()) {
-        await overlayBtn.click();
-      } else {
-        await card.locator('.productinfo .add-to-cart').click({ force: true });
+      const addBtn = card.locator('.add-to-cart').first();
+      await addBtn.click({ force: true });
+
+      try {
+        await this.continueShoppingBtn.waitFor({ state: 'visible', timeout: 4000 });
+      } catch {
+        const overlayBtn = card.locator('.overlay-content .add-to-cart');
+        if (await overlayBtn.isVisible()) {
+          await overlayBtn.click({ force: true });
+        } else {
+          await addBtn.click({ force: true });
+        }
+        await this.continueShoppingBtn.waitFor({ state: 'visible', timeout: 5000 });
       }
 
-      await this.continueShoppingBtn.waitFor({ state: 'visible' });
       await this.continueShoppingBtn.click();
       await this.continueShoppingBtn.waitFor({ state: 'hidden' });
     }
