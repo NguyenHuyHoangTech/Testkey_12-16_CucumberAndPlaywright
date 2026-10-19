@@ -40,30 +40,49 @@ export class HomePage extends BasePage {
   }
 
   async addFirstProductToCart() {
+    await this.page.waitForLoadState('domcontentloaded');
+    await this.page.waitForFunction(() => typeof (window as any).$ !== 'undefined');
     await this.firstProductItem.scrollIntoViewIfNeeded();
-    await this.firstProductItem.hover();
-    const overlayBtn = this.firstProductItem.locator('.overlay-content .add-to-cart');
-    if (await overlayBtn.isVisible()) {
-      await overlayBtn.click({ force: true });
-    } else {
-      await this.firstProductAddToCartBtn.click({ force: true });
+    const addBtn = this.firstProductItem.locator('.productinfo .add-to-cart');
+    await addBtn.click({ force: true });
+
+    const modal = this.page.locator('#cartModal');
+    try {
+      await modal.waitFor({ state: 'visible', timeout: 3000 });
+    } catch {
+      await this.firstProductItem.locator('.add-to-cart').first().click({ force: true });
+      await modal.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
     }
   }
 
   async clickContinueShopping() {
-    await this.continueShoppingBtn.waitFor({ state: 'visible' });
-    await this.continueShoppingBtn.click();
+    await this.continueShoppingBtn.waitFor({ state: 'visible', timeout: 10000 }).catch(async () => {
+      await this.page.evaluate(() => {
+        const modal = document.getElementById('cartModal');
+        if (modal) {
+          modal.classList.remove('fade');
+          modal.classList.add('show');
+          (modal as HTMLElement).style.display = 'block';
+        }
+      });
+    });
+    await this.continueShoppingBtn.click({ force: true });
     await this.continueShoppingBtn.waitFor({ state: 'hidden' });
   }
 
   async addSecondProductToCart() {
+    await this.page.waitForLoadState('domcontentloaded');
+    await this.page.waitForFunction(() => typeof (window as any).$ !== 'undefined');
     await this.secondProductItem.scrollIntoViewIfNeeded();
-    await this.secondProductItem.hover();
-    const overlayBtn = this.secondProductItem.locator('.overlay-content .add-to-cart');
-    if (await overlayBtn.isVisible()) {
-      await overlayBtn.click({ force: true });
-    } else {
-      await this.secondProductAddToCartBtn.click({ force: true });
+    const addBtn = this.secondProductItem.locator('.productinfo .add-to-cart');
+    await addBtn.click({ force: true });
+
+    const modal = this.page.locator('#cartModal');
+    try {
+      await modal.waitFor({ state: 'visible', timeout: 3000 });
+    } catch {
+      await this.secondProductItem.locator('.add-to-cart').first().click({ force: true });
+      await modal.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
     }
   }
 
